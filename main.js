@@ -33,7 +33,7 @@ function calculaTempo(tempoObjetivo) {
     let minutos = Math.floor(segundos / 60);
     let horas = Math.floor(minutos / 60);
     let dias = Math.floor(horas / 24);
-
+// calculo de arredondamento das variaveis do tempo
     segundos %= 60;
     minutos %= 60;
     horas %= 24;
