@@ -1,5 +1,6 @@
 const botoes = document.querySelectorAll(".botao");
 const textos = document.querySelectorAll(".aba-conteudo");
+//busca de todas as classes .botao e .aba-conteudo
 
 for (let i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
@@ -12,6 +13,8 @@ for (let i = 0; i < botoes.length; i++) {
         botoes[i].classList.add("ativo");
         textos[i].classList.add("ativo");
     }
+// para o cursor parar em um dos botoes da aba código
+// ao clicar ele remove e adiciona a classe .ativo
 }
 
 const contadores = document.querySelectorAll(".contador");
@@ -19,13 +22,13 @@ const tempoObjetivo1 = new Date("2025-05-01T00:00:00");
 const tempoObjetivo2 = new Date("2025-05-20T00:00:00");
 const tempoObjetivo3 = new Date("2025-04-12T00:00:00");
 const tempoObjetivo4 = new Date("2025-12-19T17:00:00");
-
+// tempo do cronometro das metas
 const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
-
+// lista dos objetivos (simbolo [])
 
 function calculaTempo(tempoObjetivo) {
-    let tempoAtual = new Date();
-    let tempoFinal = tempoObjetivo - tempoAtual;
+    let tempoAtual = new Date();//horario atual
+    let tempoFinal = tempoObjetivo - tempoAtual;//diferenca de tempo
     let segundos = Math.floor(tempoFinal / 1000);
     let minutos = Math.floor(segundos / 60);
     let horas = Math.floor(minutos / 60);
